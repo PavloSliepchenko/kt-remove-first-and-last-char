@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.0"
+    kotlin("jvm") version "1.8.0"
     application
     id("io.gitlab.arturbosch.detekt") version "1.23.3"
 }
@@ -20,13 +20,7 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(20)
-}
-
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(20))
-    }
+    jvmToolchain(11)
 }
 
 detekt {
